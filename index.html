@@ -1,0 +1,312 @@
+<html>
+    <head>
+        <title>Home Page</title>
+        <link href="./dist/styles.css" rel="stylesheet">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+        <style>
+            /* Keyframes for animations */
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            
+            @keyframes slideUp {
+                0% { transform: translateY(20px); opacity: 0; }
+                100% { transform: translateY(0); opacity: 1; }
+            }
+        
+            @keyframes popIn {
+                0% { transform: scale(0.9); opacity: 0; }
+                100% { transform: scale(1); opacity: 1; }
+            }
+        
+            @keyframes fadeSlideIn {
+                0% { opacity: 0; transform: translateY(10px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+        
+    </head>
+    <body class="bg-gray-50" id="home" >
+
+        <!-- Navbar -->
+         <div class="flex justify-between">
+            <img src="images/logo.png" alt="logo" class="h-24 w-24 mx-12 my-12 rounded-full border-4 border-black">
+            <!-- < class="p-10 rounded-full mx-60 my-12" style="background: linear-gradient(to right, #7251B5, #DEC9E9);"> -->
+            <nav class="p-10 rounded-full mx-60 my-12" style="background: linear-gradient(to right, #7251B5, #C19EE0, #7251B5);">
+                <div class="max-w-7xl mx-auto flex justify-between items-center text-center">
+                    <!-- Navbar Links Centered -->
+                    <div class="flex-1 flex justify-center space-x-6">
+                        <!-- Home -->
+                        <a href="#home" class="text-white hover:text-gray-300">Home</a>
+        
+                        <!-- Features Dropdown -->
+                        <div class="relative group">
+                            <button class="text-white  hover:text-gray-300 focus:outline-none">
+                                Features
+                            </button>
+                            <div class="absolute left-0 hidden bg-white z-20 text-black shadow-lg rounded-lg w-48 group-hover:block">
+                                <ul class="py-2">
+                                    <li><a href="call-booking.html" class="block px-4 py-2">Talk to Experts</a></li>
+                                    <li><a href="community.html" class="block px-4 py-2">Community Page</a></li>
+                                    <li><a href="mood-tracking.html" class="block px-4 py-2">Track your mood</a></li>
+                                    <li><a href="music page.html" class="block px-4 py-2">Meditation</a></li>
+                                    <li><a href="yoga.html">Yoga</a></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!-- Contact Us -->
+                        <a href="#footer" class="text-white hover:text-gray-300">Contact Us</a>
+        
+                        <!-- Membership -->
+                        <a href="membership.html" class="text-white hover:text-gray-300">Membership</a>
+                    </div>
+        
+                    <!-- User Profile (Right side) -->
+                    
+                </div>
+            </nav>
+
+            <div class="flex items-center space-x-4 text-right mx-12 relative">
+                <!-- Profile Icon for Unknown User -->
+                <div class="relative group">
+                    <!-- Unknown user icon -->
+                    <img src="images/user.png" alt="User Icon" class="h-10 w-10 rounded-full cursor-pointer hover:border-purple-900 border-4 transition duration-100" id="profileIcon">
+            
+                    <!-- Dropdown menu -->
+                    <div class="absolute right-0 hidden bg-white z-20 text-black shadow-lg rounded-lg w-48 mt-2" id="dropdownMenu">
+                        <ul class="py-2">
+                            <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Log In</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Sign Up</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Forgot Password</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <script>
+                // Select elements
+                const profileIcon = document.getElementById("profileIcon");
+                const dropdownMenu = document.getElementById("dropdownMenu");
+            
+                // Toggle dropdown visibility when clicking the profile icon
+                profileIcon.addEventListener("click", () => {
+                    // Toggle the visibility of the dropdown menu
+                    dropdownMenu.classList.toggle("hidden");
+                });
+            
+                // Optionally, you can close the dropdown if the user clicks anywhere else
+                document.addEventListener("click", (event) => {
+                    if (!profileIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                        dropdownMenu.classList.add("hidden");
+                    }
+                });
+            </script>
+            
+            
+        </div>
+
+        <!-- Description -->
+        <div class="p-10 mx-12 rounded-3xl flex justify-between" style="background-color: #C19EE0; opacity: 0; animation: fadeIn 1.5s ease-in-out forwards;">
+            <img src="images/page1_mental_health.jpeg" alt="Mental health image" class="h-96 w-96" 
+                style="transform: scale(0.9); opacity: 0; animation: popIn 1.5s ease-out forwards 0.8s; transition: transform 0.3s ease-in-out;">
+            <div class="text-center" style="transform: translateY(20px); opacity: 0; animation: slideUp 1.5s ease-in-out forwards 0.5s;">
+                <h1 class="text-6xl" style="color: #6247AA;"><b>Mental Health</b></h1>
+                <p class="text-3xl mx-16">
+                    At <span style="color: #6247AA">InnerSpark</span>, we're committed to supporting your well-being with a wide range of 
+                    mental health resources. Whether you're looking for expert advice, a community of like-minded 
+                    individuals, or a relaxing activity to de-stress, we've got you covered.<br><br>
+        
+                    Explore our features:<br><br>
+                </p>
+                <ul class="text-2xl">
+                    <li style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.7s ease-in-out forwards 1s;">Talk to Experts for professional guidance<br></li>
+                    <li style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.7s ease-in-out forwards 1.2s;">Join the Community Page to connect with others<br></li>
+                    <li style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.7s ease-in-out forwards 1.4s;">Track your mood and get relevant suggestions<br></li>
+                    <li style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.7s ease-in-out forwards 1.6s;">Get Yoga postures according to state of your mind<br></li>
+                    <li style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.7s ease-in-out forwards 1.8s;">Listen to Calming Music for a peaceful break<br></li>
+                </ul>
+                <p class="text-3xl mx-16">
+                    Take control of your mental health journey today with 
+                    <b><span style="color: #6247AA">InnerSpark — your space for peace, support, and growth.</span></b>
+                </p>
+            </div>
+        </div>
+
+        <!-- Section for Features -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-5xl font-bold text-pink-600 mb-8" style="color: #6247AA">Our Features</h2>
+            
+            <!-- Horizontal Scroll Container -->
+            <div class="flex overflow-x-auto gap-8 pb-4">
+                <!-- Card 1 -->
+                <div class="min-w-[300px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:translate-y-2 transition-all duration-300 ease-in-out relative" style="background: linear-gradient(to bottom, #DEC9E9, #9163CB)">
+                    
+                    <h3 class="text-xl font-semibold text-pink-500 mb-4" style="color: #6247AA">Talk to Experts</h3>
+                    <img src="images/page1_expert.jpeg" alt="Talk to Experts" class="w-[300px] h-[300px] mx-auto rounded-3xl mb-4 object-cover">
+                    <p class="text-gray-700">Get personalized guidance from mental health professionals. Whether it’s a quick consultation or ongoing support, we’ve got your back.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="min-w-[300px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:translate-y-2 transition-all duration-300 ease-in-out relative" style="background: linear-gradient(to bottom, #DEC9E9, #9163CB)">
+                    <h3 class="text-xl font-semibold text-pink-500 mb-4" style="color: #6247AA">Community Page</h3>
+                    <img src="images/page1_track.jpeg" alt="Community" class="w-[300px] h-[300px] mx-auto rounded-3xl mb-4 object-cover">
+                    <p class="text-gray-700">Join our supportive community of individuals on the same journey. Share experiences, ask questions, and connect with others in a safe space.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="min-w-[300px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:translate-y-2 transition-all duration-300 ease-in-out relative" style="background: linear-gradient(to bottom, #DEC9E9, #9163CB)">
+                    <h3 class="text-xl font-semibold text-pink-500 mb-4" style="color: #6247AA">Track your mood</h3>
+                    <img src="images/page1_community.jpeg" alt="Track your mood" class="w-[300px] h-[300px] mx-auto rounded-3xl mb-4 object-cover">
+                    <p class="text-gray-700">The "Track Your Mood" feature lets users select from four mood emojis, revealing tailored activity suggestions for each.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="min-w-[300px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:translate-y-2 transition-all duration-300 ease-in-out relative" style="background: linear-gradient(to bottom, #DEC9E9, #9163CB)">
+                    <h3 class="text-xl font-semibold text-pink-500 mb-4" style="color: #6247AA">Music</h3>
+                    <img src="images/page1_music.jpeg" alt="Music" class="w-[300px] h-[300px] mx-auto rounded-3xl mb-4 object-cover">
+                    <p class="text-gray-700">Listen to calming music to help you unwind, meditate, or simply enjoy a peaceful break from the daily hustle.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="min-w-[300px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:translate-y-2 transition-all duration-300 ease-in-out relative" style="background: linear-gradient(to bottom, #DEC9E9, #9163CB)">
+                    <h3 class="text-xl font-semibold text-pink-500 mb-4" style="color: #6247AA">SoulFlow Yoga</h3>
+                    <img src="images/page1_yoga.jpeg" alt="SoulFlow Yoga" class="w-[300px] h-[300px] mx-auto rounded-3xl mb-4 object-cover">
+                    <p class="text-gray-700">Our Yoga feature offers calming, guided sessions to help users relax and de-stress. Each session is tailored for mental clarity and inner peace, enhancing overall well-being.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="min-w-[300px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:translate-y-2 transition-all duration-300 ease-in-out relative" style="background: linear-gradient(to bottom, #DEC9E9, #9163CB)">
+                    <h3 class="text-xl font-semibold text-pink-500 mb-4" style="color: #6247AA">Mira, Your AI Wellness Buddy</h3>
+                    <img src="images/page1_mira.gif" alt="Mira, Your AI Wellness Buddy" class="w-[300px] h-[300px] mx-auto rounded-3xl mb-4 object-cover">
+                    <p class="text-gray-700">Mira offers personalized guidance for mental well-being, mood tracking, and self-care routines, all tailored to your unique needs. Whether you're looking for relaxation tips, mindfulness practices, or just a friendly chat, Mira is here to support you on your journey to inner peace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <section class="py-16" style="background: linear-gradient(to bottom, #DEC9E9, #B185DB)">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-5xl font-bold text-pink-600 mb-8" style="color: #6247AA">Meet the Makers</h2>
+                
+                <!-- Horizontal Scrolling Container -->
+                <div class="flex overflow-x-auto gap-8 pb-4">
+                    <!-- Publisher 1 -->
+                    <div class="min-w-[250px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl duration-300 hover:translate-y-2 transition-all ease-in-out relative">
+                        <img src="path/to/photo1.jpg" alt="Publisher 1" class="w-32 h-32 mx-auto rounded-full mb-4">
+                        <h3 class="text-xl font-semibold mb-2" style="color: #6247AA">Shaivi Jain</h3>
+                        <p class="text-gray-700">
+                            Shaivi is the visionary behind the project, having brought the idea to life and led its development. With a passion for technology and mental health, she’s been the driving force in creating the app and bringing the team together. Her leadership and dedication have been key to making this project a reality.
+                        </p>
+                    </div>
+        
+                    <!-- Publisher 2 -->
+                    <div class="min-w-[250px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl duration-300 hover:translate-y-2 transition-all ease-in-out relative">
+                        <img src="images/anushka_page1.png" alt="Publisher 2" class="w-32 h-32 mx-auto rounded-full mb-4">
+                        <h3 class="text-xl font-semibold mb-2" style="color: #6247AA">Anushka Aggarwal</h3>
+                        <p class="text-gray-700">
+                            Anushka was responsible for designing the diagrams that brought the project’s structure to life. Her attention to detail and creative approach ensured that the diagrams were not only clear but also effectively communicated the project’s core ideas and flow.
+                        </p>
+                    </div>
+        
+                    <!-- Publisher 3 -->
+                    <div class="min-w-[250px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl duration-300 hover:translate-y-2 transition-all ease-in-out relative">
+                        <img src="path/to/photo3.jpg" alt="Publisher 3" class="w-32 h-32 mx-auto rounded-full mb-4">
+                        <h3 class="text-xl font-semibold mb-2" style="color: #6247AA">Shreya Rathore</h3>
+                        <p class="text-gray-700">
+                            Shreya worked alongside Anushka in designing the project’s diagrams, contributing her creativity and technical skills. Her collaboration ensured the diagrams were both functional and visually structured, helping to effectively communicate the project’s design and workflow
+                        </p>
+                    </div>
+        
+                    <!-- Publisher 4 -->
+                    <div class="min-w-[250px] bg-white p-6 rounded-lg shadow-lg hover:shadow-xl duration-300 hover:translate-y-2 transition-all ease-in-out relative">
+                        <img src="images/twinkle_page1.jpeg" alt="Publisher 4" class="w-32 h-32 mx-auto rounded-full mb-4">
+                        <h3 class="text-xl font-semibold mb-2" style="color: #6247AA">Twinkle</h3>
+                        <p class="text-gray-700">
+                            Twinkle brought fresh, innovative ideas to the project, helping shape its direction. Her creativity and out-of-the-box thinking played a key role in refining the concept and adding new features, ensuring the project stayed dynamic and impactful.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <footer class="text-black py-8" id="footer" style="background-color: #A06CD5;">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- About Us Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">About Us</h3>
+                        <p class="text-black">We are committed to improving mental health awareness and support through engaging features like expert guidance, a community space, fun activities, and more.</p>
+                    </div>
+        
+                    <!-- Useful Links -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Useful Links</h3>
+                        <ul>
+                            <li><a href="#" class="text-black hover:text-white">Home</a></li>
+                            <li><a href="#" class="text-black hover:text-white">Features</a></li>
+                            <li><a href="#" class="text-black hover:text-white">Contact Us</a></li>
+                            <li><a href="#" class="text-black hover:text-white">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                        <p class="text-black">Have questions? Reach out to us for support or inquiries:</p>
+                        <p class="text-black">Email: InnerSpark@gmail.com</p>
+                        <p class="text-black">Phone: +91 7496 857189</p>
+                    </div>
+        
+                    <!-- Social Media Links -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-6">
+                            <a href="#" class="text-black hover:text-white">
+                                <i class="fab fa-facebook-f"></i> <!-- Add Font Awesome Icon -->
+                            </a>
+                            <a href="#" class="text-black hover:text-white">
+                                <i class="fab fa-twitter"></i> <!-- Add Font Awesome Icon -->
+                            </a>
+                            <a href="#" class="text-black hover:text-white">
+                                <i class="fab fa-instagram"></i> <!-- Add Font Awesome Icon -->
+                            </a>
+                            <a href="#" class="text-black hover:text-white">
+                                <i class="fab fa-linkedin-in"></i> <!-- Add Font Awesome Icon -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Bottom Copyright Section -->
+                <div class="mt-12 border-t border-gray-300 pt-6 text-center">
+                    <p class="text-black text-sm">2024 InnerSpark. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            window.addEventListener('mouseover', initLandbot, { once: true });
+            window.addEventListener('touchstart', initLandbot, { once: true });
+            var myLandbot;
+            function initLandbot() {
+              if (!myLandbot) {
+                var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+                s.addEventListener('load', function() {
+                  myLandbot = new Landbot.Popup({
+                    configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2672886-SV782V916B6DPVS6/index.json',
+                  });
+                });
+                s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+              }
+            }
+        </script>
+    
+    </body>
+</html>

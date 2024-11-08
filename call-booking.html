@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Booking</title>
+    <link href="./dist/styles.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <header class="flex justify-between items-center p-6">
+        <img src="images/logo.png" alt="logo" class="h-24 w-24 mx-12 my-12 rounded-full border-4 border-black">
+        <!-- <nav class="bg-pink-500 p-6 rounded-full mx-auto flex items-center space-x-6"> -->
+        <nav class="p-10 rounded-full my-12 space-x-6 mx-12 flex" style="background: linear-gradient(to right, #7251B5, #C19EE0, #7251B5);">
+            <a href="index.html" class="text-white hover:text-gray-300">Home</a>
+            <div class="relative group">
+                <button class="text-white hover:text-gray-300 focus:outline-none">Features</button>
+                <div class="absolute left-0 hidden bg-white text-black shadow-lg rounded-lg w-48 group-hover:block">
+                    <ul class="py-2">
+                        <li><a href="#same" class="block px-4 py-2">Talk to Experts</a></li>
+                        <li><a href="community.html" class="block px-4 py-2">Community Page</a></li>
+                        <li><a href="mood-tracking.html" class="block px-4 py-2">Track your mood</a></li>
+                        <li><a href="music page.html" class="block px-4 py-2">Meditation</a></li>
+                        <li><a href="yoga.html" class="block px-4 py-2">Yoga</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#footer" class="text-white hover:text-gray-300">Contact Us</a>
+            <a href="membership.html" class="text-white hover:text-gray-300">Membership</a>
+        </nav>
+        <div class="flex items-center space-x-4 text-right mx-12 relative">
+            <!-- Profile Icon for Unknown User -->
+            <div class="relative group">
+                <!-- Unknown user icon -->
+                <img src="images/user.png" alt="User Icon" class="h-10 w-10 rounded-full cursor-pointer hover:border-purple-900 border-4 transition duration-100" id="profileIcon">
+        
+                <!-- Dropdown menu -->
+                <div class="absolute right-0 hidden bg-white text-black shadow-lg rounded-lg w-48 mt-2" id="dropdownMenu">
+                    <ul class="py-2">
+                        <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Log In</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Sign Up</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Forgot Password</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <script>
+                // Select elements
+                const profileIcon = document.getElementById("profileIcon");
+                const dropdownMenu = document.getElementById("dropdownMenu");
+            
+                // Toggle dropdown visibility when clicking the profile icon
+                profileIcon.addEventListener("click", () => {
+                    // Toggle the visibility of the dropdown menu
+                    dropdownMenu.classList.toggle("hidden");
+                });
+            
+                // Optionally, you can close the dropdown if the user clicks anywhere else
+                document.addEventListener("click", (event) => {
+                    if (!profileIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                        dropdownMenu.classList.add("hidden");
+                    }
+                });
+            </script>
+        </div>
+    </header>
+
+    <section class="py-16" style="background: #815AC0 ">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Doctor Info Box 1 -->
+                <!-- Doctor Info Box -->
+                <div class="bg-white duration-300 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-full max-w-4xl mb-6" style="background: linear-gradient(to bottom, #DEC9E9, #7251B5);">
+                    <div class="flex items-center" >
+                        <!-- Doctor Image -->
+                        <div class="flex-shrink-0 mr-6">
+                            <img src="images/page2_fdr.jpeg" alt="Doctor Photo" class="w-32 h-32 rounded-2xl">
+                        </div>
+                        
+                        <!-- Doctor Info (Description) -->
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-semibold text-black mb-2">Dr. Sarah Blake</h3>
+                            <p class="text-gray-700 mb-4">
+                                Dr. Sarah Blake is a highly experienced specialist in mental wellbeing with over 7 years of experience in treating depression, anxiety, and schizophrenia.
+                            </p>
+                        </div>
+                        
+                        <!-- Buttons Section -->
+                        <div class="flex flex-col justify-between space-y-4">
+                            <button class="openDialog bg-white text-black py-2 px-4 rounded-md hover:bg-purple-400 w-full">Book Appointment</button>
+                            <a href="more-details.html" class="bg-white text-gray-700 py-2 px-6 rounded-lg hover:bg-gray-400 transition duration-300 w-full text-center">More Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-4xl mb-6" style="background: linear-gradient(to bottom, #DEC9E9, #7251B5)">
+                    <div class="flex items-center">
+                        <!-- Doctor Image -->
+                        <div class="flex-shrink-0 mr-6">
+                            <img src="images/page2_mdr.jpeg" alt="Doctor Photo" class="w-32 h-32 rounded-2xl">
+                        </div>
+                        
+                        <!-- Doctor Info (Description) -->
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-semibold text-black mb-2">Dr. Daniel Shaw</h3>
+                            <p class="text-gray-700 mb-4">
+                                Dr. Daniel Shaw specializes in psychiatry. With extensive experience, they offer comprehensive care for patients suffering from conditions such as anxiety disorders,PTSD, and personality disorders.                            </p>
+                        </div>
+                        
+                        <!-- Buttons Section -->
+                        <div class="flex flex-col justify-between space-y-4">
+                            <button class="openDialog bg-white text-black py-2 px-4 rounded-md hover:bg-purple-400 w-full">Book Appointment</button>
+                            <a href="more-details.html" class="bg-white text-gray-700 py-2 px-6 rounded-lg hover:bg-gray-400 transition duration-300 w-full text-center">More Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-4xl mb-6" style="background: linear-gradient(to bottom, #DEC9E9, #7251B5)">
+                    <div class="flex items-center">
+                        <!-- Doctor Image -->
+                        <div class="flex-shrink-0 mr-6">
+                            <img src="images/page2_frd2.jpeg" alt="Doctor Photo" class="w-32 h-32 rounded-2xl">
+                        </div>
+                        
+                        <!-- Doctor Info (Description) -->
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-semibold text-black mb-2">Dr. Claire M.</h3>
+                            <p class="text-gray-700 mb-4">
+                                Dr. Claire M. is known for their expertise in clinical psychology, offering personalized care for patients facing challenges such as depression, trauma, and stress-related disorders.                            </p>
+                        </div>
+                        
+                        <!-- Buttons Section -->
+                        <div class="flex flex-col justify-between space-y-4">
+                            <button class="openDialog bg-white text-black py-2 px-4 rounded-md hover:bg-purple-400 w-full">Book Appointment</button>
+                            <a href="more-details.html" class="bg-white text-gray-700 py-2 px-6 rounded-lg hover:bg-gray-400 transition duration-300 w-full text-center">More Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-4xl mb-6" style="background: linear-gradient(to bottom, #DEC9E9, #7251B5)">
+                    <div class="flex items-center">
+                        <!-- Doctor Image -->
+                        <div class="flex-shrink-0 mr-6">
+                            <img src="images/page2_mdr2.jpeg" alt="Doctor Photo" class="w-32 h-32 rounded-2xl">
+                        </div>
+                        
+                        <!-- Doctor Info (Description) -->
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-semibold text-black mb-2">Dr. James Fletcher</h3>
+                            <p class="text-gray-700 mb-4">
+                                Dr. James Fletcher is a highly regarded psychiatrist, specializing in the treatment of mood disorders, including major depressive disorder, bipolar disorder, and anxiety disorders.                            </p>
+                        </div>
+                        
+                        <!-- Buttons Section -->
+                        <div class="flex flex-col justify-between space-y-4">
+                            <button class="openDialog bg-white text-black py-2 px-4 rounded-md hover:bg-purple-400 w-full">Book Appointment</button>
+                            <a href="more-details.html" class="bg-white text-gray-700 py-2 px-6 rounded-lg hover:bg-gray-400 transition duration-300 w-full text-center">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Dialog -->
+    <div id="appointmentDialog" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white rounded-lg p-6 w-96">
+            <h2 class="text-xl font-semibold text-center mb-4">Book Appointment</h2>
+            <div class="mb-4">
+                <label for="appointmentDate" class="block text-gray-700">Select Date</label>
+                <input type="date" id="appointmentDate" class="mt-1 p-2 border border-gray-300 rounded w-full">
+            </div>
+            <div class="mb-4">
+                <p class="text-gray-700">Select Appointment Type</p>
+                <div class="flex items-center space-x-4 mt-2">
+                    <label class="cursor-pointer">
+                        <input type="radio" name="appointmentType" value="call" class="mr-2"> Call Appointment
+                    </label>
+                    <label class="cursor-pointer">
+                        <input type="radio" name="appointmentType" value="video" class="mr-2"> Video Appointment
+                    </label>
+                </div>
+            </div>
+            <button id="submitAppointment" class=" text-white py-2 px-6 rounded-lg hover:bg-purple-950 w-full" style="background-color:#7251B5">Book Appointment</button>
+            <button id="closeDialog" class="mt-4 text-gray-500 hover:text-gray-700 w-full">Cancel</button>
+        </div>
+    </div>
+
+    <footer class="text-black py-8" id="footer" style="background-color: #A06CD5;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- About Us Section -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">About Us</h3>
+                    <p class="text-black">We are committed to improving mental health awareness and support through engaging features like expert guidance, a community space, fun activities, and more.</p>
+                </div>
+    
+                <!-- Useful Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Useful Links</h3>
+                    <ul>
+                        <li><a href="#" class="text-black hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-black hover:text-white">Features</a></li>
+                        <li><a href="#" class="text-black hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-black hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <p class="text-black">Have questions? Reach out to us for support or inquiries:</p>
+                    <p class="text-black">Email: InnerSpark@gmail.com</p>
+                    <p class="text-black">Phone: +91 7496 857189</p>
+                </div>
+    
+                <!-- Social Media Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-black hover:text-white">
+                            <i class="fab fa-facebook-f"></i> <!-- Add Font Awesome Icon -->
+                        </a>
+                        <a href="#" class="text-black hover:text-white">
+                            <i class="fab fa-twitter"></i> <!-- Add Font Awesome Icon -->
+                        </a>
+                        <a href="#" class="text-black hover:text-white">
+                            <i class="fab fa-instagram"></i> <!-- Add Font Awesome Icon -->
+                        </a>
+                        <a href="#" class="text-black hover:text-white">
+                            <i class="fab fa-linkedin-in"></i> <!-- Add Font Awesome Icon -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bottom Copyright Section -->
+            <div class="mt-12 border-t border-gray-300 pt-6 text-center">
+                <p class="text-black text-sm">2024 InnerSpark. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const openDialogButtons = document.querySelectorAll(".openDialog");
+        const appointmentDialog = document.getElementById("appointmentDialog");
+        const closeDialogButton = document.getElementById("closeDialog");
+
+        openDialogButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                appointmentDialog.classList.remove("hidden");
+            });
+        });
+
+        closeDialogButton.addEventListener("click", () => {
+            appointmentDialog.classList.add("hidden");
+        });
+    </script>
+
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              myLandbot = new Landbot.Popup({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2672886-SV782V916B6DPVS6/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+    </script>
+
+</body>
+</html>

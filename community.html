@@ -1,0 +1,255 @@
+<html>
+    <head>
+        <title>Community Page</title>
+        <link href="./dist/styles.css" rel="stylesheet">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+        <style>
+            /* Keyframes for animations */
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            
+            @keyframes slideUp {
+                0% { transform: translateY(20px); opacity: 0; }
+                100% { transform: translateY(0); opacity: 1; }
+            }
+        
+            @keyframes popIn {
+                0% { transform: scale(0.9); opacity: 0; }
+                100% { transform: scale(1); opacity: 1; }
+            }
+        
+            @keyframes fadeSlideIn {
+                0% { opacity: 0; transform: translateY(10px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50" id="space">
+
+        <!-- Navbar -->
+         <div class="flex justify-between">
+            <img src="images/logo.png" alt="logo" class="h-24 w-24 mx-12 my-12 rounded-full border-4 border-black">
+            <nav class="p-10 rounded-full mx-60 my-12" style="background: linear-gradient(to right, #7251B5, #C19EE0, #7251B5);">
+                <div class="max-w-7xl mx-auto flex justify-between items-center text-center">
+                    <!-- Navbar Links Centered -->
+                    <div class="flex-1 flex justify-center space-x-6">
+                        <!-- Home -->
+                        <a href="index.html" class="text-white hover:text-gray-300">Home</a>
+        
+                        <!-- Features Dropdown -->
+                        <div class="relative group">
+                            <button class="text-white hover:text-gray-300 focus:outline-none">
+                                Features
+                            </button>
+                            <div class="absolute left-0 hidden bg-white text-black shadow-lg rounded-lg w-48 group-hover:block">
+                                <ul class="py-2">
+                                    <li><a href="call-booking.html" class="block px-4 py-2">Talk to Experts</a></li>
+                                    <li><a href="#space" class="block px-4 py-2">Community Page</a></li>
+                                    <li><a href="mood-tracking.html" class="block px-4 py-2">Track your mood</a></li>
+                                    <li><a href="music page.html" class="block px-4 py-2">Meditation</a></li>
+                                    <li><a href="yoga.html">Yoga</a></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!-- Contact Us -->
+                        <a href="#footer" class="text-white hover:text-gray-300">Contact Us</a>
+        
+                        <!-- Membership -->
+                        <a href="membership.html" class="text-white hover:text-gray-300">Membership</a>
+                    </div>
+        
+                    <!-- User Profile (Right side) -->
+                    
+                </div>
+            </nav>
+
+            <div class="flex items-center space-x-4 text-right mx-12 relative">
+                <!-- Profile Icon for Unknown User -->
+                <div class="relative group">
+                    <!-- Unknown user icon -->
+                    <img src="images/user.png" alt="User Icon" class="h-10 w-10 rounded-full cursor-pointer hover:border-purple-900 border-4 transition duration-100" id="profileIcon">
+            
+                    <!-- Dropdown menu -->
+                    <div class="absolute right-0 hidden bg-white text-black shadow-lg rounded-lg w-48 mt-2" id="dropdownMenu">
+                        <ul class="py-2">
+                            <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Log In</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Sign Up</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Forgot Password</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <script>
+                // Select elements
+                const profileIcon = document.getElementById("profileIcon");
+                const dropdownMenu = document.getElementById("dropdownMenu");
+            
+                // Toggle dropdown visibility when clicking the profile icon
+                profileIcon.addEventListener("click", () => {
+                    // Toggle the visibility of the dropdown menu
+                    dropdownMenu.classList.toggle("hidden");
+                });
+            
+                // Optionally, you can close the dropdown if the user clicks anywhere else
+                document.addEventListener("click", (event) => {
+                    if (!profileIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                        dropdownMenu.classList.add("hidden");
+                    }
+                });
+            </script>
+            
+            
+        </div>
+        </div>
+        <!-- Header Section -->
+        <header class=" text-white py-8 text-center mx-[113px] rounded-md" style="background-color: #7251B5;">
+            <h1 class="text-4xl font-bold ">Welcome to the Community</h1>
+            <p class="mt-2">Join us, share your thoughts, and grow together!</p>
+            <button class="mt-4 px-6 py-2 bg-white rounded-full" style="color: #7251B5;"><a href="join-now.html">Join Now</a></button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-8">
+            <!-- Featured Discussions -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold mb-4">Featured Discussions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg" style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.5s ease-in-out forwards 1s;">
+                        <h3 class="font-semibold text-lg">Mindful Breathing for Stress Relief</h3>
+                        <p class="text-sm text-gray-600">A simple guide to practice deep breathing exercises to calm your mind and reduce daily stress.</p>
+                        <a href="#" class=" hover:text-pink-600" style="color: #7251B5;">Read more</a>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg" style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.5s ease-in-out forwards 1s;">
+                        <h3 class="font-semibold text-lg">The Power of Gratitude</h3>
+                        <p class="text-sm text-gray-600">Learn how focusing on what you're grateful for can improve your mood and mental health.</p>
+                        <a href="#" class=" hover:text-pink-600" style="color: #7251B5;">Read more</a>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg" style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.5s ease-in-out forwards 1s;">
+                        <h3 class="font-semibold text-lg">Building Emotional Resilience</h3>
+                        <p class="text-sm text-gray-600">Practical tips for strengthening your emotional resilience and coping with life's challenges.</p>
+                        <a href="#" class=" hover:text-pink-600" style="color: #7251B5;">Read more</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold mb-4">Categories</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-lg" style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.5s ease-in-out forwards 2s;">
+                         <h3 class="font-semibold text-lg">Mental Well-Being</h3>
+                        <p class="text-sm text-gray-600">Discussions about the latest issues regarding mental well-being.</p>
+                        <a href="#" class=" hover:text-pink-600" style="color: #7251B5;">Explore</a>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg" style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.5s ease-in-out forwards 2s;">
+                         <h3 class="font-semibold text-lg">Health</h3>
+                        <p class="text-sm text-gray-600">Join conversations about mental and physical health.</p>
+                        <a href="#" class=" hover:text-pink-600" style="color: #7251B5;">Explore</a>
+                    </div>
+                    <!-- More Categories here -->
+                </div>
+            </section>
+
+            <!-- Upcoming Events -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold mb-4">Upcoming Events</h2>
+                <div class="flex overflow-x-auto space-x-4">
+                    <!-- Event 1 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg w-64"  style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.5s ease-in-out forwards 3s;" >
+                        <h3 class="font-semibold text-lg">Mental Health Matters</h3>
+                        <p class="text-sm text-gray-600">Join us for an insightful session on understanding mental health and practical ways to maintain emotional well-being.</p>
+                        <a href="#" class=" hover:text-pink-600" style="color: #7251B5;">Register</a>
+                    </div>
+                    <!-- Event 2 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg w-64"  style="opacity: 0; transform: translateY(10px); animation: fadeSlideIn 0.5s ease-in-out forwards 3s;" >
+                        <h3 class="font-semibold text-lg">Calm Minds</h3>
+                        <p class="text-sm text-gray-600">Learn effective stress-relief strategies through mindfulness, relaxation exercises, and self-care practices.</p>
+                        <a href="#" class=" hover:text-pink-600" style="color: #7251B5;">Register</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-black py-8" id="footer" style="background-color: #A06CD5;">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- About Us Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">About Us</h3>
+                        <p class="text-black">We are committed to improving mental health awareness and support through engaging features like expert guidance, a community space, fun activities, and more.</p>
+                    </div>
+        
+                    <!-- Useful Links -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Useful Links</h3>
+                        <ul>
+                            <li><a href="#" class="text-black hover:text-white">Home</a></li>
+                            <li><a href="#" class="text-black hover:text-white">Features</a></li>
+                            <li><a href="#" class="text-black hover:text-white">Contact Us</a></li>
+                            <li><a href="#" class="text-black hover:text-white">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                        <p class="text-black">Have questions? Reach out to us for support or inquiries:</p>
+                        <p class="text-black">Email: InnerSpark@gmail.com</p>
+                        <p class="text-black">Phone: +91 7496 857189</p>
+                    </div>
+        
+                    <!-- Social Media Links -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-6">
+                            <a href="#" class="text-black hover:text-white">
+                                <i class="fab fa-facebook-f"></i> <!-- Add Font Awesome Icon -->
+                            </a>
+                            <a href="#" class="text-black hover:text-white">
+                                <i class="fab fa-twitter"></i> <!-- Add Font Awesome Icon -->
+                            </a>
+                            <a href="#" class="text-black hover:text-white">
+                                <i class="fab fa-instagram"></i> <!-- Add Font Awesome Icon -->
+                            </a>
+                            <a href="#" class="text-black hover:text-white">
+                                <i class="fab fa-linkedin-in"></i> <!-- Add Font Awesome Icon -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Bottom Copyright Section -->
+                <div class="mt-12 border-t border-gray-300 pt-6 text-center">
+                    <p class="text-black text-sm">2024 InnerSpark. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            window.addEventListener('mouseover', initLandbot, { once: true });
+            window.addEventListener('touchstart', initLandbot, { once: true });
+            var myLandbot;
+            function initLandbot() {
+              if (!myLandbot) {
+                var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+                s.addEventListener('load', function() {
+                  myLandbot = new Landbot.Popup({
+                    configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2672886-SV782V916B6DPVS6/index.json',
+                  });
+                });
+                s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+              }
+            }
+        </script>
+    
+    </body>
+</html>

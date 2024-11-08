@@ -1,0 +1,278 @@
+<html>
+    <head>
+        <title>More Details Page</title>
+        <link href="./dist/styles.css" rel="stylesheet">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+        <style>
+            /* Add a subtle hover effect on cards */
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+    
+            /* Card header background color */
+            .card-header {
+                background-color: #ffe6f1;
+            }
+    
+            /* Hover effect for buttons */
+            .btn:hover {
+                background-color: #ff66b2;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50" id="home">
+
+        <!-- Navbar -->
+         <div class="flex justify-between">
+            <img src="images/logo.png" alt="logo" class="h-24 w-24 mx-12 my-12 rounded-full">
+            <nav class="p-10 rounded-full mx-60 my-12" style="background: linear-gradient(to right, #7251B5, #C19EE0, #7251B5);">
+                <div class="max-w-7xl mx-auto flex justify-between items-center text-center">
+                    <!-- Navbar Links Centered -->
+                    <div class="flex-1 flex justify-center space-x-6">
+                        <!-- Home -->
+                        <a href="#home" class="text-white hover:text-gray-300">Home</a>
+        
+                        <!-- Features Dropdown -->
+                        <div class="relative group">
+                            <button class="text-white hover:text-gray-300 focus:outline-none">
+                                Features
+                            </button>
+                            <div class="absolute left-0 hidden bg-white text-black shadow-lg rounded-lg w-48 group-hover:block">
+                                <ul class="py-2">
+                                    <li><a href="call-booking.html" class="block px-4 py-2">Talk to Experts</a></li>
+                                    <li><a href="community.html" class="block px-4 py-2">Community Page</a></li>
+                                    <li><a href="mood-tracking.html" class="block px-4 py-2">Track your mood</a></li>
+                                    <li><a href="music page.html" class="block px-4 py-2">Meditation</a></li>
+                                    <li><a href="yoga.html">Yoga</a></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!-- Contact Us -->
+                        <a href="#footer" class="text-white hover:text-gray-300">Contact Us</a>
+        
+                        <!-- Membership -->
+                        <a href="membership.html" class="text-white hover:text-gray-300">Membership</a>
+                    </div>
+        
+                    <!-- User Profile (Right side) -->
+                    
+                </div>
+            </nav>
+
+            <div class="flex items-center space-x-4 text-right mx-12 relative">
+                <!-- Profile Icon for Unknown User -->
+                <div class="relative group">
+                    <!-- Unknown user icon -->
+                    <img src="images/user.png" alt="User Icon" class="h-10 w-10 rounded-full cursor-pointer hover:border-purple-900 border-4 transition duration-100" id="profileIcon">
+            
+                    <!-- Dropdown menu -->
+                    <div class="absolute right-0 hidden bg-white text-black shadow-lg rounded-lg w-48 mt-2" id="dropdownMenu">
+                        <ul class="py-2">
+                            <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Log In</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Sign Up</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:text-pink-700" style="color: #7251B5;">Forgot Password</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <script>
+                // Select elements
+                const profileIcon = document.getElementById("profileIcon");
+                const dropdownMenu = document.getElementById("dropdownMenu");
+            
+                // Toggle dropdown visibility when clicking the profile icon
+                profileIcon.addEventListener("click", () => {
+                    // Toggle the visibility of the dropdown menu
+                    dropdownMenu.classList.toggle("hidden");
+                });
+            
+                // Optionally, you can close the dropdown if the user clicks anywhere else
+                document.addEventListener("click", (event) => {
+                    if (!profileIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                        dropdownMenu.classList.add("hidden");
+                    }
+                });
+            </script>
+            
+            
+        </div>
+
+
+    <!-- Main Container -->
+    <div class="container mx-auto py-10 px-4">
+
+        <!-- Doctor Info Section -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8 card">
+            <div class="flex items-center mb-6">
+                <!-- Doctor Image -->
+                <div class="flex-shrink-0 mr-6">
+                    <img src="images/page2_fdr.jpeg" alt="Dr. Sarah Blake" class="w-40 h-40 rounded-full border-4" style="border-color: #7251B5">
+                </div>
+
+                <!-- Doctor Info (Name & Description) -->
+                <div class="flex-grow">
+                    <h1 class="text-3xl font-semibold mb-2" style="color: #7251B5">Dr. Sarah Blake</h1>
+                    <p class="text-gray-700 mb-4">
+                        Dr. Sarah Blake is a highly experienced specialist in mental wellbeing with over 7 years of experience in treating depression, anxiety, and schizophrenia. She is dedicated to providing holistic care that not only addresses the symptoms but also the root causes of mental health challenges.
+                    </p>
+                    <p class="text-gray-700">
+                        <strong>Specializations:</strong> Depression, Anxiety, Schizophrenia, Stress Management, Cognitive Behavioral Therapy (CBT)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Qualifications Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-6 rounded-lg shadow-lg card" style="background-color:#D2B7E5">
+                <div class="card-header p-4 rounded-t-lg" style="background-color:#DEC9E9">
+                    <h2 class="text-2xl font-semibold" style="color: #7251B5">Qualifications</h2>
+                </div>
+                <ul class="list-disc pl-6 text-gray-700">
+                    <li>MD in Psychiatry, Harvard University</li>
+                    <li>Certified Cognitive Behavioral Therapy (CBT) Practitioner</li>
+                    <li>Licensed Mental Health Counselor (LMHC)</li>
+                    <li>Member, American Psychological Association (APA)</li>
+                    <li>Certified in Advanced Trauma Therapy</li>
+                </ul>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="p-6 rounded-lg shadow-lg card" style="background-color:#D2B7E5">
+                <div class="card-header p-4 rounded-t-lg" style="background-color:#DEC9E9">
+                    <h2 class="text-2xl font-semibold" style="color: #7251B5">Experience</h2>
+                </div>
+                <p class="text-gray-700">
+                    Dr. Sarah Blake has over 7 years of experience working with patients across diverse backgrounds. She has helped hundreds of patients overcome mental health challenges, particularly in the areas of depression, anxiety, and schizophrenia. She has worked in various settings, including private practices, hospitals, and counseling centers.
+                </p>
+            </div>
+        </div>
+
+        <!-- Patient Reviews Section -->
+        <div class="mt-8 bg-white p-6 rounded-lg shadow-lg card">
+            <h2 class="text-2xl font-semibold mb-4" style="color: #7251B5">Patient Reviews</h2>
+            <div class="space-y-6">
+                <!-- Review 1 -->
+                <div class="flex items-center space-x-4">
+                    <img src="images/page3_john.jpeg" alt="Patient 1" class="w-16 h-16 rounded-full border-4" style="border-color:#B185DB">
+                    <div>
+                        <p class="text-gray-700 font-semibold">John Doe</p>
+                        <p class="text-gray-600">"Dr. Blake has been a tremendous help in managing my anxiety. Her approach is thoughtful and holistic. I feel much more in control of my life."</p>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="flex items-center space-x-4">
+                    <img src="images/page3_jade.jpeg" alt="Patient 2" class="w-16 h-16 rounded-full border-4" style="border-color:#B185DB">
+                    <div>
+                        <p class="text-gray-700 font-semibold">Jane Smith</p>
+                        <p class="text-gray-600">"Dr. Blake's compassionate approach made me feel heard and understood. Her sessions are a safe space for me to explore my feelings."</p>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="flex items-center space-x-4">
+                    <img src="images/page3_emily.jpeg" alt="Patient 3" class="w-16 h-16 rounded-full border-4" style="border-color:#B185DB">
+                    <div>
+                        <p class="text-gray-700 font-semibold">Emily Johnson</p>
+                        <p class="text-gray-600">"She helped me manage my depression through CBT and mindfulness techniques. I highly recommend her services."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact & Appointment Booking Section -->
+        <div class="mt-8 p-6 rounded-lg shadow-lg card" style="background-color:#D2B7E5">
+            <h2 class="text-2xl font-semibold mb-4" style="color: #7251B5">Contact & Book Appointment</h2>
+            <p class="text-gray-700 mb-4">To schedule an appointment with Dr. Sarah Blake, please use the form below or contact her office directly. She is available for both in-person and online consultations.</p>
+
+            <form action="#" method="POST" class="space-y-6">
+                <input type="text" name="name" placeholder="Full Name" class="w-full p-3 border rounded-lg text-gray-700" required>
+                <input type="email" name="email" placeholder="Email Address" class="w-full p-3 border rounded-lg text-gray-700" required>
+                <textarea name="message" placeholder="Your Message" rows="4" class="w-full p-3 border rounded-lg text-gray-700" required></textarea>
+
+                <div class="flex justify-between">
+                    <button type="submit" class="text-white py-2 px-6 rounded-lg btn w-full" style="background-color: #7251B5">Send Message</button>
+                    <a href="booking-page.html" class="text-white py-2 px-6 rounded-lg btn w-full text-center" style="background-color: #7251B5">Book Appointment</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="text-black py-8" id="footer" style="background-color: #A06CD5;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- About Us Section -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">About Us</h3>
+                    <p class="text-black">We are committed to improving mental health awareness and support through engaging features like expert guidance, a community space, fun activities, and more.</p>
+                </div>
+    
+                <!-- Useful Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Useful Links</h3>
+                    <ul>
+                        <li><a href="#" class="text-black hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-black hover:text-white">Features</a></li>
+                        <li><a href="#" class="text-black hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-black hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <p class="text-black">Have questions? Reach out to us for support or inquiries:</p>
+                    <p class="text-black">Email: InnerSpark@gmail.com</p>
+                    <p class="text-black">Phone: +91 7496 857189</p>
+                </div>
+    
+                <!-- Social Media Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-black hover:text-white">
+                            <i class="fab fa-facebook-f"></i> <!-- Add Font Awesome Icon -->
+                        </a>
+                        <a href="#" class="text-black hover:text-white">
+                            <i class="fab fa-twitter"></i> <!-- Add Font Awesome Icon -->
+                        </a>
+                        <a href="#" class="text-black hover:text-white">
+                            <i class="fab fa-instagram"></i> <!-- Add Font Awesome Icon -->
+                        </a>
+                        <a href="#" class="text-black hover:text-white">
+                            <i class="fab fa-linkedin-in"></i> <!-- Add Font Awesome Icon -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bottom Copyright Section -->
+            <div class="mt-12 border-t border-gray-300 pt-6 text-center">
+                <p class="text-black text-sm">2024 InnerSpark. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              myLandbot = new Landbot.Popup({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2672886-SV782V916B6DPVS6/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+    </script>
+
+</body>
+</html>
